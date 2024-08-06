@@ -13,11 +13,11 @@ import Skills from "../components/sections/Skills.jsx";
 
 function Homepage() {
   const { theme, switchTheme } = useContext(AppContext);
-  const location = useLocation();
+  // const location = useLocation();
 
-  useEffect(() => {
-    window?.HSStaticMethods.autoInit();
-  }, [location.pathname]);
+  // useEffect(() => {
+  //   window?.HSStaticMethods.autoInit();
+  // }, [location.pathname]);
 
   return (
     <div className="bg-zinc-100 dark:bg-zinc-900">

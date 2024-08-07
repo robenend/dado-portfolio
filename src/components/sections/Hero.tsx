@@ -7,9 +7,9 @@ function Hero() {
       <div className="self-center">
         <div className="hs-tooltip [--placement:right] w-20 hs-tooltip-toggle">
           <img
-            src={user_info.main.photo}
+            src="../../../public/dado.jpg"
             className="rounded-full mb-6 lg:hidden"
-            alt="Daniel Shan Balico Graduation Picture"
+            alt="Dado Graduation Picture"
           />
 
           {/* =========== TOOLTIP TEXT =========== */}
@@ -48,8 +48,8 @@ function Hero() {
           <div className="hidden lg:block w-[480px] self-center">
             <img
               className="rounded-[10%] transform rotate-3"
-              src={user_info.main.photo}
-              alt="Daniel Shan Balico Graduation Picture"
+              src="../../../public/dado.jpg"
+              alt="Dado Profile Picture"
             />
           </div>
         </div>

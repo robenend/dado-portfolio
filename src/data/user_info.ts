@@ -5,7 +5,7 @@ const info = {
     description:
       "I am a dedicated Electrical and Computer Engineering student specializing in Electrical and Communication streams. I have a strong foundation in theoretical knowledge and practical skills, with a passion for solving complex engineering problems. I possess excellent analytical abilities, communication skills, and a drive for continuous learning. My goal is to contribute to innovative projects that make a positive impact on society.",
     role: "Network Engineer, Front-End Developer",
-    photo: "@/assets/dado.jpg",
+    photo: "https://raw.githubusercontent.com/robenend/dado-portfolio/main/public/dado.jpg?token=GHSAT0AAAAAACVWYNALH3E2FSU3KAWRR6NAZVTG55A",
     email: "dadiasrat12@gmail.com",
   },
 
@@ -74,7 +74,7 @@ const info = {
       school: "Addis Ababa Science and Technology University",
       degree: "Bsc in Electrical and Communication Engineering",
       duration: "2019 - 2024",
-      image: "@/public/aastu.png",
+      image: "https://raw.githubusercontent.com/robenend/dado-portfolio/main/public/aastu.png?token=GHSAT0AAAAAACVWYNALAYGSDTYV2JTJPC4WZVTG43A",
     },
   ],
 
@@ -84,7 +84,7 @@ const info = {
       position: "Internship",
       company: "F.D.R.E Air Force.",
       duration: "July 2023 - October 2023 ",
-      image: "@/public/fdre.jpg",
+      image: "https://raw.githubusercontent.com/robenend/dado-portfolio/main/public/fdre.jpg?token=GHSAT0AAAAAACVWYNAKAB6GKPSLAKNM65HQZVTG6TQ",
       descriptions: [
         "I participate in Data Communication and Installation of network Technology and its configuration during staying three months.",
       ],

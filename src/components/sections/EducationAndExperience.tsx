@@ -1,8 +1,9 @@
 import user_info from "../../data/user_info.js";
 import { FaLandmark } from "react-icons/fa";
 import { FaBuildingUser } from "react-icons/fa6";
+import { FcGoogle } from "react-icons/fc";
 import { PiCertificateFill } from "react-icons/pi";
-import { SiMeta, SiQuicktype} from "react-icons/si";
+import { SiHackerrank, SiIbm } from "react-icons/si";
 
 function EducationAndExperience() {
   return (
@@ -16,7 +17,7 @@ function EducationAndExperience() {
         </h4>
 
         {/* =========== EDUCATION LIST =========== */}
-        {user_info?.education && user_info?.education?.map((edu, index) => {
+        {user_info.education.map((edu, index) => {
           return (
             <div key={index}>
               {/* =========== DURATION =========== */}
@@ -36,7 +37,7 @@ function EducationAndExperience() {
                 <div className="grow p-2 pb-8">
                   {/* =========== IMAGE AND SCHOOL NAME =========== */}
                   <h3 className="flex items-center gap-x-2 font-semibold text-zinc-800 dark:text-white">
-                    <img className="w-9 h-9 rounded-full" src="../../../public/aastu.png" alt="School Logo" />
+                    <img className="w-9 h-9 rounded-full" src={edu.image} alt="School Logo" />
                     <div className="leading-5">
                       {edu.school}
                       {/* =========== DEGREE =========== */}
@@ -65,13 +66,15 @@ function EducationAndExperience() {
           <div className="hs-carousel relative overflow-hidden w-full h-48 bg-white dark:bg-gray-800 rounded-lg">
             <div className="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
               {/* =========== CERTIFICATES LIST =========== */}
-              {user_info?.certificates  && user_info?.certificates?.map((cert, index) => {
+              {user_info.certificates.map((cert, index) => {
                 return (
                   <div className="hs-carousel-slide relative" key={index}>
-                    {cert.icon === "meta"? (
-                      <SiMeta className="text-blue-500 absolute right-5 top-0 text-5xl" />
-                    ): (
-                      <SiQuicktype className="text-green-500 absolute right-5 top-3 text-3xl" />
+                    {cert.icon === "ibm" ? (
+                      <SiIbm className="text-blue-500 absolute right-5 top-0 text-5xl" />
+                    ) : cert.icon === "google" ? (
+                      <FcGoogle className="text-blue-500 absolute right-5 top-3 text-3xl" />
+                    ) : (
+                      <SiHackerrank className="text-green-500 absolute right-5 top-3 text-3xl" />
                     )}
 
                     <div className="flex justify-center items-center h-full bg-gray-100 p-6 dark:bg-neutral-900">
@@ -146,7 +149,7 @@ function EducationAndExperience() {
           
           {/* =========== CAROUSEL PAGINATION =========== */}
           <div className="hs-carousel-pagination flex justify-center absolute bottom-3 start-0 end-0 space-x-2">
-            {user_info?.certificates?.map((cert, index) => {
+            {user_info.certificates.map((cert, index) => {
               return (
                 <span
                   className="hs-carousel-active:bg-red-700 hs-carousel-active:border-red-700 size-3 border border-gray-400 rounded-full cursor-pointer dark:border-neutral-600 dark:hs-carousel-active:bg-red-500 dark:hs-carousel-active:border-red-500"
@@ -168,7 +171,7 @@ function EducationAndExperience() {
 
         <div className="md:h-[480px] md:overflow-y-scroll scroll-smooth">
           {/* =========== EXPERIENCE LIST =========== */}
-          {user_info?.experience?.map((exp, index) => {
+          {user_info.experience.map((exp, index) => {
             return (
               <div key={index}>
                 <div className="ps-2 my-2 first:mt-0 !mt-2">
@@ -187,7 +190,7 @@ function EducationAndExperience() {
                   <div className="grow p-2 pb-8">
                     {/* =========== COMPANY NAME =========== */}
                     <h3 className="flex items-center gap-x-2 font-semibold text-zinc-800 dark:text-white">
-                      <img className="w-9 rounded-full" src="../../../public/fdre.jpg" alt="Company Logo" />
+                      <img className="w-9 rounded-full" src={exp.image} alt="Company Logo" />
                       <div className="leading-5">
                         {exp.company}
                         {/* =========== POSITION =========== */}
@@ -199,7 +202,7 @@ function EducationAndExperience() {
                     
                     <ul className="list-disc list-inside text-zinc-800 dark:text-white mt-2">
                       {/* =========== DESCRIPTION LIST =========== */}
-                      {exp?.descriptions?.map((desc, index) => {
+                      {exp.descriptions.map((desc, index) => {
                         return (
                           <li className="flex space-x-3" key={index}>
                             <svg
